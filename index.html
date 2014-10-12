@@ -3,19 +3,19 @@
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
   <title>CSS Will Change Module Level 1</title>
-  <link href="./CSS Will Change Module Level 1_files/default.css" rel="stylesheet" type="text/css">
-  <link href="./CSS Will Change Module Level 1_files/W3C-WD" rel="stylesheet" type="text/css">
+  <link href="./assets/default.css" rel="stylesheet" type="text/css">
+  <link href="./assets/W3C-WD" rel="stylesheet" type="text/css">
 </head>
 <body class="h-entry">
 <div class="head">
   <p><a href="http://www.w3.org/">
-    <img alt="W3C" height="48" src="./CSS Will Change Module Level 1_files/w3c_home" width="72">
+    <img alt="W3C" height="48" src="./assets/w3c_home" width="72">
 </a>
 </p>
   <h1 class="p-name no-ref" id="title">CSS Will Change 模型级别 1</h1>
   <h2 class="no-num no-toc no-ref heading settled heading" id="subtitle"><span class="content">W3C 首次公布工作草案,
     <span class="dt-updated"><span class="value-title" title="20140429">29 April 2014</span></span></span></h2>
-  <div data-fill-with="spec-metadata"><dl><dt>此版本:</dt><dd><a class="u-url" href="http://www.w3.org/TR/2014/WD-css-will-change-1-20140429/">http://www.w3.org/TR/2014/WD-css-will-change-1-20140429/</a></dd><dt>上一版本:</dt><dd><a href="./CSS Will Change Module Level 1_files/CSS Will Change Module Level 1.html">http://www.w3.org/TR/css-will-change-1/</a></dd><dt>编辑的草案:</dt><dd><a href="http://dev.w3.org/csswg/css-will-change/">http://dev.w3.org/csswg/css-will-change/</a>
+  <div data-fill-with="spec-metadata"><dl><dt>此版本:</dt><dd><a class="u-url" href="http://www.w3.org/TR/2014/WD-css-will-change-1-20140429/">http://www.w3.org/TR/2014/WD-css-will-change-1-20140429/</a></dd><dt>上一版本:</dt><dd><a href="http://www.w3.org/TR/css-will-change-1/">http://www.w3.org/TR/css-will-change-1/</a></dd><dt>编辑的草案:</dt><dd><a href="http://dev.w3.org/csswg/css-will-change/">http://dev.w3.org/csswg/css-will-change/</a>
   </dd><dt>信息反馈:</dt>
         <dd><a href="mailto:www-style@w3.org?subject=%5Bcss-will-change%5D%20feedback">www-style@w3.org</a>
             with subject line
@@ -28,7 +28,7 @@
 </div>
 
 <h2 class="no-num no-toc no-ref heading settled heading" id="abstract"><span class="content">文摘</span></h2>
-<p class="p-summary" data-fill-with="abstract">本文档定义CSS的属性----<a class="property" data-link-type="propdesc" href="http://www.w3.org/TR/css-will-change-1/#propdef-will-change" title="will-change">will-change</a> ,这个属性允许一个开发者(CSS作者)提前告知用户代理一个元素可能会做出的改变.  允许用户代理提前优化需要改变的元素, 在动画真正开始之前,为动画提前完成一些的重度开销.
+<p class="p-summary" data-fill-with="abstract">本文档定义CSS的属性----<a class="property" data-link-type="propdesc" href="#propdef-will-change" title="will-change">will-change</a> ,这个属性允许一个开发者(CSS作者)提前告知用户代理一个元素可能会做出的改变.  允许用户代理提前优化需要改变的元素, 在动画真正开始之前,为动画提前完成一些的重度开销.
 在屏幕,在纸,在演讲等等中,<a href="http://www.w3.org/TR/CSS/">CSS</a>是一门语言用来描述结构化的渲染文档
 (例如HTML和XML)
 </p>
@@ -60,27 +60,27 @@
 
 <h2 class="no-num no-toc no-ref heading settled heading" id="contents"><span class="content">内容目录</span></h2>
 <div data-fill-with="table-of-contents"><ul class="toc">
-	<li><a href="http://www.w3.org/TR/css-will-change-1/#intro"><span class="secno">1</span> 介绍</a>
-	</li><li><a href="http://www.w3.org/TR/css-will-change-1/#will-change"><span class="secno">2</span> 说明在未来的行为: <span class="property" data-link-type="propdesc" title="will-change">will-change</span> 属性</a>
-	</li><li><a href="http://www.w3.org/TR/css-will-change-1/#conformance"><span class="secno"></span> 一致性</a>
+	<li><a href="#intro"><span class="secno">1</span> 介绍</a>
+	</li><li><a href="#will-change"><span class="secno">2</span> 说明在未来的行为: <span class="property" data-link-type="propdesc" title="will-change">will-change</span> 属性</a>
+	</li><li><a href="#conformance"><span class="secno"></span> 一致性</a>
 		<ul class="toc">
-		<li><a href="http://www.w3.org/TR/css-will-change-1/#conventions"><span class="secno"></span> 文档规定</a>
-		</li><li><a href="http://www.w3.org/TR/css-will-change-1/#conformance-classes"><span class="secno"></span> 一致性类别</a>
-		</li><li><a href="http://www.w3.org/TR/css-will-change-1/#partial"><span class="secno"></span>部分实现方法</a>
-		</li><li><a href="http://www.w3.org/TR/css-will-change-1/#experimental"><span class="secno"></span>实验性方法</a>
-		</li><li><a href="http://www.w3.org/TR/css-will-change-1/#testing"><span class="secno"></span>非实验性方法</a></li></ul>
-	</li><li><a href="http://www.w3.org/TR/css-will-change-1/#references"><span class="secno"></span> 参考资料</a>
+		<li><a href="#conventions"><span class="secno"></span> 文档规定</a>
+		</li><li><a href="#conformance-classes"><span class="secno"></span> 一致性类别</a>
+		</li><li><a href="#partial"><span class="secno"></span>部分实现方法</a>
+		</li><li><a href="#experimental"><span class="secno"></span>实验性方法</a>
+		</li><li><a href="#testing"><span class="secno"></span>非实验性方法</a></li></ul>
+	</li><li><a href="#references"><span class="secno"></span> 参考资料</a>
 		<ul class="toc">
-		<li><a href="http://www.w3.org/TR/css-will-change-1/#normative"><span class="secno"></span>规范系参考</a>
-		</li><li><a href="http://www.w3.org/TR/css-will-change-1/#informative"><span class="secno"></span>信息系参考</a></li></ul>
-	</li><li><a href="http://www.w3.org/TR/css-will-change-1/#index"><span class="secno"></span> 索引</a>
-	</li><li><a href="http://www.w3.org/TR/css-will-change-1/#property-index"><span class="secno"></span> 属性索引</a></li></ul></div>
+		<li><a href="#normative"><span class="secno"></span>规范系参考</a>
+		</li><li><a href="#informative"><span class="secno"></span>信息系参考</a></li></ul>
+	</li><li><a href="#index"><span class="secno"></span> 索引</a>
+	</li><li><a href="#property-index"><span class="secno"></span> 属性索引</a></li></ul></div>
 
 
 
 
 <h2 class="heading settled heading" data-level="1" id="intro"><span class="secno">1 </span><span class="content">
-介绍</span><a class="self-link" href="http://www.w3.org/TR/css-will-change-1/#intro"></a></h2>
+介绍</span><a class="self-link" href="#intro"></a></h2>
 
 <p>	现代CSS渲染经过大量复杂的逻辑优化以保证页面渲染的快速和有效.
 	遗憾地, 使用这样的逻辑优化通常是需要花费非常重度的启用开销,
@@ -98,17 +98,17 @@
 		这个操作可以延迟一个<a class="property" data-link-type="propdesc" href="http://www.w3.org/TR/css3-transforms/#propdef-transform" title="transform">transform</a>动画的开始通过一个明显的瞬间.
 	</p></div>
 
-<p>在此规范中的<a class="property" data-link-type="propdesc" href="http://www.w3.org/TR/css-will-change-1/#propdef-will-change" title="will-change">will-change</a> 属性定义允许开发者(CSS作者)去提前声明一些可能在未来会发生改变的属性,
+<p>在此规范中的<a class="property" data-link-type="propdesc" href="#propdef-will-change" title="will-change">will-change</a> 属性定义允许开发者(CSS作者)去提前声明一些可能在未来会发生改变的属性,
 	在这些属性需要(改变)之前,便于用户代理在一段时间内可以设置一些适当的逻辑优化.
 	这种方式, 当改变真的发生时,
 	页面的更新就非常爽快了.
 
 </p><h2 class="heading settled heading" data-level="2" id="will-change"><span class="secno">2 </span><span class="content">
-说明在未来的行为: <a class="property" data-link-type="propdesc" href="http://www.w3.org/TR/css-will-change-1/#propdef-will-change" title="will-change">will-change</a>属性</span><a class="self-link" href="http://www.w3.org/TR/css-will-change-1/#will-change"></a></h2>
+说明在未来的行为: <a class="property" data-link-type="propdesc" href="#propdef-will-change" title="will-change">will-change</a>属性</span><a class="self-link" href="#will-change"></a></h2>
 
-<table class="definition propdef"><tbody><tr><th>属性名:</th><td><dfn class="css-code" data-dfn-type="property" data-export="" id="propdef-will-change">will-change<a class="self-link" href="http://www.w3.org/TR/css-will-change-1/#propdef-will-change"></a></dfn></td></tr><tr><th>属性值:</th><td class="prod">auto | <a class="production css-code" data-link-type="type" href="http://www.w3.org/TR/css-will-change-1/#typedef-animateable-feature" title="&lt;animateable-feature&gt;">&lt;animateable-feature&gt;</a>#</td></tr><tr><th>初始值:</th><td>auto</td></tr><tr><th>应用于:</th><td>all elements</td></tr><tr><th>继承性:</th><td>no</td></tr><tr><th>媒体:</th><td>all</td></tr><tr><th>计算值:</th><td>specified value</td></tr><tr><th>百分比:</th><td>n/a</td></tr></tbody></table>
-<pre class="prod"><dfn class="css-code" data-dfn-type="type" data-export="" id="typedef-animateable-feature">&lt;animateable-feature&gt;<a class="self-link" href="http://www.w3.org/TR/css-will-change-1/#typedef-animateable-feature"></a></dfn> = scroll-position | contents | <a class="production css-code" data-link-type="type" href="http://www.w3.org/TR/css3-values/#identifier-value" title="&lt;custom-ident&gt;">&lt;custom-ident&gt;</a></pre>
-<p><a class="property" data-link-type="propdesc" href="http://www.w3.org/TR/css-will-change-1/#propdef-will-change" title="will-change">will-change</a> 属性 为用户代理提供了一个渲染的线索,
+<table class="definition propdef"><tbody><tr><th>属性名:</th><td><dfn class="css-code" data-dfn-type="property" data-export="" id="propdef-will-change">will-change<a class="self-link" href="#propdef-will-change"></a></dfn></td></tr><tr><th>属性值:</th><td class="prod">auto | <a class="production css-code" data-link-type="type" href="#typedef-animateable-feature" title="&lt;animateable-feature&gt;">&lt;animateable-feature&gt;</a>#</td></tr><tr><th>初始值:</th><td>auto</td></tr><tr><th>应用于:</th><td>all elements</td></tr><tr><th>继承性:</th><td>no</td></tr><tr><th>媒体:</th><td>all</td></tr><tr><th>计算值:</th><td>specified value</td></tr><tr><th>百分比:</th><td>n/a</td></tr></tbody></table>
+<pre class="prod"><dfn class="css-code" data-dfn-type="type" data-export="" id="typedef-animateable-feature">&lt;animateable-feature&gt;<a class="self-link" href="#typedef-animateable-feature"></a></dfn> = scroll-position | contents | <a class="production css-code" data-link-type="type" href="http://www.w3.org/TR/css3-values/#identifier-value" title="&lt;custom-ident&gt;">&lt;custom-ident&gt;</a></pre>
+<p><a class="property" data-link-type="propdesc" href="#propdef-will-change" title="will-change">will-change</a> 属性 为用户代理提供了一个渲染的线索,
 	开始于开发者(CSS作者)在这个元素期望去做的多种改变.
 	这个属性允许用户代理去提前完成一些必要的逻辑优化使得渲染这些改变时更加流畅,
 	避免了当开发者(CSS作者) 改变属性或者动画开始时的“jank”特性.
@@ -116,12 +116,12 @@
 </p><p>属性值拥有以下的值:
 
 	</p><dl data-dfn-for="will-change" data-dfn-type="value">
-		<dt><dfn class="css-code" data-dfn-for="will-change" data-dfn-type="value" data-export="" id="valuedef-auto">auto<a class="self-link" href="http://www.w3.org/TR/css-will-change-1/#valuedef-auto"></a></dfn>
+		<dt><dfn class="css-code" data-dfn-for="will-change" data-dfn-type="value" data-export="" id="valuedef-auto">auto<a class="self-link" href="#valuedef-auto"></a></dfn>
 		</dt><dd>
 <p>			表示没有明确的意图;
 			无论是启发式和最优化，用户代理应该应用都和正常情况相同.
 
-		</p></dd><dt><dfn class="css-code" data-dfn-for="will-change" data-dfn-type="value" data-export="" id="valuedef-scroll-position">scroll-position<a class="self-link" href="http://www.w3.org/TR/css-will-change-1/#valuedef-scroll-position"></a></dfn>
+		</p></dd><dt><dfn class="css-code" data-dfn-for="will-change" data-dfn-type="value" data-export="" id="valuedef-scroll-position">scroll-position<a class="self-link" href="#valuedef-scroll-position"></a></dfn>
 		</dt><dd>
 <p>			表示开发者(CSS作者)期望去在接下来去改变或者有动画应用元素的滚动位置.
 
@@ -132,7 +132,7 @@
 				一个浏览器可能会取这个值作为一个信号去扩大内容在滚动窗口中的范围当滚动窗口被渲染,
 				以至于长(快速)滚动能够被执行的更流畅.
 
-		</p></dd><dt><dfn class="css-code" data-dfn-for="will-change" data-dfn-type="value" data-export="" id="valuedef-contents">contents<a class="self-link" href="http://www.w3.org/TR/css-will-change-1/#valuedef-contents"></a></dfn>
+		</p></dd><dt><dfn class="css-code" data-dfn-for="will-change" data-dfn-type="value" data-export="" id="valuedef-contents">contents<a class="self-link" href="#valuedef-contents"></a></dfn>
 		</dt><dd>
 <p>			表示开发者(CSS作者)期望去在接下来去改变或者有动画应用元素的内容
 
@@ -145,11 +145,11 @@
         一个浏览器可能会取这个值作为一个信号去主动减少在这个元素上的缓存
 				或者避免缓存所有和紧紧去重复渲染这个元素经常被改变的内容.
 
-		</p></dd><dt><dfn class="css-code" data-dfn-for="will-change" data-dfn-type="value" data-export="" id="valuedef-custom-ident"><a class="production css-code" data-link-type="type" href="http://www.w3.org/TR/css3-values/#identifier-value" title="&lt;custom-ident&gt;">&lt;custom-ident&gt;</a><a class="self-link" href="http://www.w3.org/TR/css-will-change-1/#valuedef-custom-ident"></a></dfn>
+		</p></dd><dt><dfn class="css-code" data-dfn-for="will-change" data-dfn-type="value" data-export="" id="valuedef-custom-ident"><a class="production css-code" data-link-type="type" href="http://www.w3.org/TR/css3-values/#identifier-value" title="&lt;custom-ident&gt;">&lt;custom-ident&gt;</a><a class="self-link" href="#valuedef-custom-ident"></a></dfn>
 		</dt><dd>
 <p>			表示开发者(CSS作者)期望去在接下来去改变或者有动画应用指定的元素的属性.
 
-</p><p>			<a class="production css-code" data-link-type="type" href="http://www.w3.org/TR/css3-values/#identifier-value" title="&lt;custom-ident&gt;">&lt;custom-ident&gt;</a> 产生是用来排除这里的关键字 <span class="css" data-link-type="maybe" title="will-change">will-change</span>, <span class="css" data-link-type="maybe" title="none">none</span>, <span class="css" data-link-type="maybe" title="all">all</span>, <a class="css" data-link-type="maybe" href="http://www.w3.org/TR/css-will-change-1/#valuedef-auto" title="auto">auto</a>, <a class="css" data-link-type="maybe" href="http://www.w3.org/TR/css-will-change-1/#valuedef-scroll-position" title="scroll-position">scroll-position</a>, and <a class="css" data-link-type="maybe" href="http://www.w3.org/TR/css-will-change-1/#valuedef-contents" title="contents">contents</a>,
+</p><p>			<a class="production css-code" data-link-type="type" href="http://www.w3.org/TR/css3-values/#identifier-value" title="&lt;custom-ident&gt;">&lt;custom-ident&gt;</a> 产生是用来排除这里的关键字 <span class="css" data-link-type="maybe" title="will-change">will-change</span>, <span class="css" data-link-type="maybe" title="none">none</span>, <span class="css" data-link-type="maybe" title="all">all</span>, <a class="css" data-link-type="maybe" href="#valuedef-auto" title="auto">auto</a>, <a class="css" data-link-type="maybe" href="#valuedef-scroll-position" title="scroll-position">scroll-position</a>, and <a class="css" data-link-type="maybe" href="#valuedef-contents" title="contents">contents</a>,
 			从<a class="production css-code" data-link-type="type" href="http://www.w3.org/TR/css3-values/#identifier-value" title="&lt;custom-ident&gt;">&lt;custom-ident&gt;</a>之外增加一些通用的关键字 .
 
 </p><p class="note">			注释: 注意所有的属性都没有受到影响在规定时,
@@ -158,14 +158,14 @@
 			这将仅仅只是简单的没有影响.
 
 </p><p>			如果一个属性无最初的值,在这个元素上这个属性将创建一个堆栈的内容,
-			明确规定在<a class="property" data-link-type="propdesc" href="http://www.w3.org/TR/css-will-change-1/#propdef-will-change" title="will-change">will-change</a>的属性必须在这个元素上创建一个堆栈的内容.
+			明确规定在<a class="property" data-link-type="propdesc" href="#propdef-will-change" title="will-change">will-change</a>的属性必须在这个元素上创建一个堆栈的内容.
 
 </p><p>			如果一个属性无最初的值, 这个属性将造成这个元素产生一个包含区块的固定定位的元素,
-			明确规定在 <a class="property" data-link-type="propdesc" href="http://www.w3.org/TR/css-will-change-1/#propdef-will-change" title="will-change">will-change</a>的属性必须造成这个元素产生一个包含区块的固定定位的元素
+			明确规定在 <a class="property" data-link-type="propdesc" href="#propdef-will-change" title="will-change">will-change</a>的属性必须造成这个元素产生一个包含区块的固定定位的元素
 
 </p><p>			如果一个属性无最初的值, 这个属性将造成在这个元素上渲染行为的不同
 			(就像对文本使用了一个与众不同反混淆的策略),
-			用户代理应该使用轮流渲染当这个属性在 <a class="property" data-link-type="propdesc" href="http://www.w3.org/TR/css-will-change-1/#propdef-will-change" title="will-change">will-change</a>被明确规定时,
+			用户代理应该使用轮流渲染当这个属性在 <a class="property" data-link-type="propdesc" href="#propdef-will-change" title="will-change">will-change</a>被明确规定时,
 		去避免渲染行为的突然不同当这个属性终于被改变时.
 
 			</p><p class="example">
@@ -181,39 +181,39 @@
 
 	<div class="example">
 		举个例子来说, 设置<a class="property" data-link-type="propdesc" href="http://www.w3.org/TR/css3-color/#opacity" title="opacity">opacity</a>任何一个超过<span class="css" data-link-type="maybe" title="1">1</span>的其它值我在这个元素上产生一个堆栈的内容.
-		因此, 设置 <a class="css" data-link-type="propdesc" href="http://www.w3.org/TR/css-will-change-1/#propdef-will-change" title="will-change">will-change: opacity</a>也会产生一个堆栈内容,
+		因此, 设置 <a class="css" data-link-type="propdesc" href="#propdef-will-change" title="will-change">will-change: opacity</a>也会产生一个堆栈内容,
 		即使 <a class="property" data-link-type="propdesc" href="http://www.w3.org/TR/css3-color/#opacity" title="opacity">opacity</a><em>目前</em> 仍然等价于 <span class="css" data-link-type="maybe" title="1">1</span>.
 	</div>
 
-<p>明确规定<a class="property" data-link-type="propdesc" href="http://www.w3.org/TR/css-will-change-1/#propdef-will-change" title="will-change">will-change</a>属性对元素没有<em>直接</em>的影响,
+<p>明确规定<a class="property" data-link-type="propdesc" href="#propdef-will-change" title="will-change">will-change</a>属性对元素没有<em>直接</em>的影响,
 	超出堆栈的内容创建和内容区块和以上规定一样.
 	这个属性仅仅是一个用户代理的渲染线索,
 	在改变真正发生之前,允许用户代理对确定的改变的类型设置潜在开销巨大的优化操作
 
 	</p><div class="note">
-		不同的浏览器能够用不同的方式使用<a class="property" data-link-type="propdesc" href="http://www.w3.org/TR/css-will-change-1/#propdef-will-change" title="will-change">will-change</a>信息,
+		不同的浏览器能够用不同的方式使用<a class="property" data-link-type="propdesc" href="#propdef-will-change" title="will-change">will-change</a>信息,
 		并且甚至对于单独的浏览器可以在不同的时间用不同的方式去使用这个信息.
 		举个例子来说, 一个浏览器可以提高元素自己的“GPU layer(GPU层)”
-		当它们有<a class="css" data-link-type="propdesc" href="http://www.w3.org/TR/css-will-change-1/#propdef-will-change" title="will-change">will-change: transform</a>规定时
+		当它们有<a class="css" data-link-type="propdesc" href="#propdef-will-change" title="will-change">will-change: transform</a>规定时
 		可能避免去做当有<em>大量的</em>元素去声明,
 		去避免耗尽GPU的内存.
 
 <p>		开发者(CSS作业)应该避免去滥用这个属性,
 		并且不应该将这个属性应用这样的元素除非元素本身已知(或者有个预期行为)和这个元素明确将会很快发生改变
-	  举个例子, 在一个静态CSS表里将<a class="property" data-link-type="propdesc" href="http://www.w3.org/TR/css-will-change-1/#propdef-will-change" title="will-change">will-change</a>应用在一个元素上
+	  举个例子, 在一个静态CSS表里将<a class="property" data-link-type="propdesc" href="#propdef-will-change" title="will-change">will-change</a>应用在一个元素上
 		通常可能是错误的;
 		大多数情况,
-		<a class="property" data-link-type="propdesc" href="http://www.w3.org/TR/css-will-change-1/#propdef-will-change" title="will-change">will-change</a>的应用应该通过script,
+		<a class="property" data-link-type="propdesc" href="#propdef-will-change" title="will-change">will-change</a>的应用应该通过script,
 		动画开始或者属性开始改变之前有一段非常短的空白,
-		并且应该马上将这个属性重置为<a class="css" data-link-type="maybe" href="http://www.w3.org/TR/css-will-change-1/#valuedef-auto" title="auto">auto</a>这个初始值
+		并且应该马上将这个属性重置为<a class="css" data-link-type="maybe" href="#valuedef-auto" title="auto">auto</a>这个初始值
 		当这个元素停止改变时
 	</p></div>
 
 <h2 class="no-ref no-num heading settled heading" id="conformance"><span class="content">
- 一致性</span><a class="self-link" href="http://www.w3.org/TR/css-will-change-1/#conformance"></a></h2>
+ 一致性</span><a class="self-link" href="#conformance"></a></h2>
 
 <h3 class="no-ref heading settled heading" id="conventions"><span class="content">
-文档规定</span><a class="self-link" href="http://www.w3.org/TR/css-will-change-1/#conventions"></a></h3>
+文档规定</span><a class="self-link" href="#conventions"></a></h3>
 
     <p>一致性的需求表达结合了
     描述性声明和RFC 2119术语. 关键词 "MUST",
@@ -221,7 +221,7 @@
     "RECOMMENDED", "MAY", 和 "OPTIONAL" 在这篇文档的规范性部分将会被解释为就像RFC 2119描述中的一样.
     当然, 为了可读性, 在这篇规范中,这些关键词都不会呈现为大写字母.
 
-  </p><p>本规范的所有文本都是标准的除了一些非常明显的区域被标记为 非标准的, 举例, 和 注释. <a data-biblio-type="normative" data-link-type="biblio" href="http://www.w3.org/TR/css-will-change-1/#rfc2119" title="rfc2119">[RFC2119]</a></p>
+  </p><p>本规范的所有文本都是标准的除了一些非常明显的区域被标记为 非标准的, 举例, 和 注释. <a data-biblio-type="normative" data-link-type="biblio" href="#rfc2119" title="rfc2119">[RFC2119]</a></p>
 
     <p>本规范的例子都是用关键字"for example"作为引导
     或者标准的文本使用<code>class="example"</code>建立出来的部分,
@@ -236,7 +236,7 @@
     </p><p class="note">注释, 这是一个提供信息的注释.</p>
 
 <h3 class="no-ref heading settled heading" id="conformance-classes"><span class="content">
-一致性类</span><a class="self-link" href="http://www.w3.org/TR/css-will-change-1/#conformance-classes"></a></h3>
+一致性类</span><a class="self-link" href="#conformance-classes"></a></h3>
 
     <p>这篇规范的一致性的定义是通过三种一致性类来定义的:
     </p><dl>
@@ -264,7 +264,7 @@
     其他所有遇见的一致性的需求的样式表都在这个模型中被描述出来
 
 </p><h3 class="no-ref heading settled heading" id="partial"><span class="content">
-部分实现的方法</span><a class="self-link" href="http://www.w3.org/TR/css-will-change-1/#partial"></a></h3>
+部分实现的方法</span><a class="self-link" href="#partial"></a></h3>
 
     <p>由于开发者(CSS作者)能够利用向前兼容的解析规则去指定回调的值, CSS的渲染<strong>必须</strong>
     被视为都是有效的(同时<a href="http://www.w3.org/TR/CSS21/conform.html#ignore">适当的忽略</a>)在任意向前规则, 属性, 属性值, 关键字,
@@ -274,7 +274,7 @@
     (被视为一个不支持的值), 整个声明都需要被CSS无视掉.</p>
 
 <h3 class="no-ref heading settled heading" id="experimental"><span class="content">
-实验性的方法</span><a class="self-link" href="http://www.w3.org/TR/css-will-change-1/#experimental"></a></h3>
+实验性的方法</span><a class="self-link" href="#experimental"></a></h3>
 
     <p>为了避免和未来的CSS特点发生冲突, CSS2.1规范
     预定保留<a href="http://www.w3.org/TR/CSS21/syndata.html#vendor-keywords">前缀语法</a>
@@ -287,7 +287,7 @@
     </p>
 
 <h3 class="no-ref heading settled heading" id="testing"><span class="content">
-非实验性的方法</span><a class="self-link" href="http://www.w3.org/TR/css-will-change-1/#testing"></a></h3>
+非实验性的方法</span><a class="self-link" href="#testing"></a></h3>
 
     <p>一旦一个规范能够在候选推荐时期区域获取到,
     非实验性的方法就是可能, 并且方法应该
@@ -305,31 +305,31 @@
     .
 
 </p><h2 class="no-num no-ref heading settled heading" id="references"><span class="content">
-参考</span><a class="self-link" href="http://www.w3.org/TR/css-will-change-1/#references"></a></h2>
+参考</span><a class="self-link" href="#references"></a></h2>
 
 <h3 class="no-num no-ref heading settled heading" id="normative"><span class="content">
-参考的标准</span><a class="self-link" href="http://www.w3.org/TR/css-will-change-1/#normative"></a></h3>
-<div data-fill-with="normative-references"><dl><dt id="rfc2119" title="RFC2119"><a class="self-link" href="http://www.w3.org/TR/css-will-change-1/#rfc2119"></a>[RFC2119]</dt><dd>S. Bradner. <a href="http://www.ietf.org/rfc/rfc2119.txt">在RFCs中使用关键字去指示文档的级别</a>. URL: <a href="http://www.ietf.org/rfc/rfc2119.txt">http://www.ietf.org/rfc/rfc2119.txt</a></dd></dl></div>
+参考的标准</span><a class="self-link" href="#normative"></a></h3>
+<div data-fill-with="normative-references"><dl><dt id="rfc2119" title="RFC2119"><a class="self-link" href="#rfc2119"></a>[RFC2119]</dt><dd>S. Bradner. <a href="http://www.ietf.org/rfc/rfc2119.txt">在RFCs中使用关键字去指示文档的级别</a>. URL: <a href="http://www.ietf.org/rfc/rfc2119.txt">http://www.ietf.org/rfc/rfc2119.txt</a></dd></dl></div>
 
 <h3 class="no-num no-ref heading settled heading" id="informative"><span class="content">
-参考的信息</span><a class="self-link" href="http://www.w3.org/TR/css-will-change-1/#informative"></a></h3>
+参考的信息</span><a class="self-link" href="#informative"></a></h3>
 <div data-fill-with="informative-references"><dl></dl></div>
 
 <h2 class="no-num no-ref heading settled heading" id="index"><span class="content">
-索引</span><a class="self-link" href="http://www.w3.org/TR/css-will-change-1/#index"></a></h2>
+索引</span><a class="self-link" href="#index"></a></h2>
 <div data-fill-with="index"><ul class="indexlist">
-<li>&lt;animateable-feature&gt;, <a href="http://www.w3.org/TR/css-will-change-1/#typedef-animateable-feature" title="section 2">2</a>
-</li><li>auto, <a href="http://www.w3.org/TR/css-will-change-1/#valuedef-auto" title="section 2">2</a>
-</li><li>contents, <a href="http://www.w3.org/TR/css-will-change-1/#valuedef-contents" title="section 2">2</a>
-</li><li>&lt;custom-ident&gt;, <a href="http://www.w3.org/TR/css-will-change-1/#valuedef-custom-ident" title="section 2">2</a>
-</li><li>scroll-position, <a href="http://www.w3.org/TR/css-will-change-1/#valuedef-scroll-position" title="section 2">2</a>
-</li><li>will-change, <a href="http://www.w3.org/TR/css-will-change-1/#propdef-will-change" title="section 2">2</a>
+<li>&lt;animateable-feature&gt;, <a href="#typedef-animateable-feature" title="section 2">2</a>
+</li><li>auto, <a href="#valuedef-auto" title="section 2">2</a>
+</li><li>contents, <a href="#valuedef-contents" title="section 2">2</a>
+</li><li>&lt;custom-ident&gt;, <a href="#valuedef-custom-ident" title="section 2">2</a>
+</li><li>scroll-position, <a href="#valuedef-scroll-position" title="section 2">2</a>
+</li><li>will-change, <a href="#propdef-will-change" title="section 2">2</a>
 </li></ul></div>
 
 <h2 class="no-num no-ref heading settled heading" id="property-index"><span class="content">
-属性的索引</span><a class="self-link" href="http://www.w3.org/TR/css-will-change-1/#property-index"></a></h2>
+属性的索引</span><a class="self-link" href="#property-index"></a></h2>
 <div data-fill-with="property-index"><table class="proptable data"><thead><tr><th scope="col">属性名</th><th scope="col">属性值</th><th scope="col">初始值</th><th scope="col">应用于</th><th scope="col">Inh.</th><th scope="col">%ages</th><th scope="col">媒体</th><th scope="col">生成值</th></tr></thead><tbody>
-<tr><th scope="row"><a class="css-code" data-link-type="property" href="http://www.w3.org/TR/css-will-change-1/#propdef-will-change" title="will-change">will-change</a></th><td>auto | &lt;animateable-feature&gt;#</td><td>auto</td><td>all elements</td><td>no</td><td>n/a</td><td>all</td><td>specified value</td></tr></tbody></table></div>
+<tr><th scope="row"><a class="css-code" data-link-type="property" href="#propdef-will-change" title="will-change">will-change</a></th><td>auto | &lt;animateable-feature&gt;#</td><td>auto</td><td>all elements</td><td>no</td><td>n/a</td><td>all</td><td>specified value</td></tr></tbody></table></div>
 
 
 </body></html>
